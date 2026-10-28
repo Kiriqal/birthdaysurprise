@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f3">
+  <meta name="description" content="A little birthday surprise, made just for you.">
+  <title>A Little Wish for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Musik pilihanmu: ganti file di folder assets -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/lagu-kamu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Opening -->
+  <div class="opening" id="opening">
+    <div class="opening-content">
+      <span class="tiny-label">A LITTLE SOMETHING FOR YOU</span>
+
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="letter-preview">
+          <span>for you, ♡</span>
+        </div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-heart">♡</div>
+      </div>
+
+      <h1>Hey, birthday girl<span class="pink">.</span></h1>
+      <p>I've prepared a little something for you.</p>
+
+      <button class="button button-primary" id="openButton">
+        Open your surprise <span>♡</span>
+      </button>
+
+      <span class="opening-note">made with a little bit of love</span>
+    </div>
+  </div>
+
+  <!-- Main website -->
+  <main id="mainContent" class="hidden">
+
+    <nav class="nav">
+      <a href="#home" class="brand">a little wish <span>♡</span></a>
+      <button id="musicButton" class="music-button" aria-label="Putar atau jeda musik">
+        <span id="musicIcon">♫</span>
+        <span id="musicLabel">Play music</span>
+      </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="hero-decoration decoration-one">✳</div>
+      <div class="hero-decoration decoration-two">♡</div>
+      <div class="hero-decoration decoration-three">✦</div>
+
+      <span class="eyebrow">A SPECIAL DAY FOR SOMEONE SPECIAL</span>
+
+      <h1>Today is all<br>about <em>you.</em></h1>
+
+      <p>
+        One more year of you being you.<br>
+        And honestly, that's something worth celebrating.
+      </p>
+
+      <a class="button button-primary" href="#letter">
+        A little message <span>↓</span>
+      </a>
+
+      <div class="hero-bottom">SCROLL A LITTLE, THERE'S MORE</div>
+    </section>
+
+    <!-- Birthday letter -->
+    <section class="section letter-section" id="letter">
+      <span class="eyebrow">WORDS FROM THE HEART</span>
+      <h2>A little letter <em>for you.</em></h2>
+
+      <article class="letter-card">
+        <div class="letter-top">
+          <span>dear you,</span>
+          <span class="letter-flower">✿</span>
+        </div>
+
+        <p>Happy birthday! ♡</p>
+
+        <p>
+          I hope today brings you lots of little reasons to smile,
+          moments that make your heart feel warm, and people who
+          remind you how wonderful you are.
+        </p>
+
+        <p>
+          May this new chapter be kinder to you, full of unexpected
+          happiness, new adventures, and dreams slowly finding
+          their way to you.
+        </p>
+
+        <p>
+          Keep being the person you are. The world is a little
+          brighter with you in it.
+        </p>
+
+        <p class="letter-ending">
+          Have the loveliest birthday, okay? ♡
+        </p>
+
+        <div class="letter-signature">
+          someone who wishes you well
+          <span>with a little smile,</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Decorative gallery: no personal photos -->
+    <section class="section memories-section" id="memories">
+      <span class="eyebrow">A FEW LITTLE THINGS</span>
+      <h2>Little things that<br>make life <em>beautiful.</em></h2>
+      <p class="section-description">
+        A tiny collection of wishes for your new chapter.
+      </p>
+
+      <div class="gallery">
+        <article class="memory-card card-pink">
+          <div class="memory-art flower-art" aria-hidden="true">✿</div>
+          <span class="memory-number">01 — GROW</span>
+          <h3>Room to bloom</h3>
+          <p>May you grow at your own pace, in your own beautiful way.</p>
+        </article>
+
+        <article class="memory-card card-cream">
+          <div class="memory-art star-art" aria-hidden="true">✦</div>
+          <span class="memory-number">02 — SHINE</span>
+          <h3>Little joys</h3>
+          <p>May the smallest things give you the biggest reasons to smile.</p>
+        </article>
+
+        <article class="memory-card card-lilac">
+          <div class="memory-art heart-art" aria-hidden="true">♡</div>
+          <span class="memory-number">03 — LOVE</span>
+          <h3>Good things ahead</h3>
+          <p>May life surprise you with things even better than you imagined.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mini game -->
+    <section class="section game-section" id="game">
+      <span class="eyebrow">A TINY LITTLE GAME</span>
+      <h2>Catch the <em>hearts.</em></h2>
+      <p class="section-description">
+        There are five little hearts hiding here.<br>
+        Catch them all to unlock one last surprise.
+      </p>
+
+      <div class="game-stats">
+        <span>HEARTS COLLECTED</span>
+        <span id="score">0 / 5</span>
+      </div>
+
+      <div class="game-area" id="gameArea">
+        <div class="game-intro" id="gameIntro">
+          <span class="game-big-heart">♡</span>
+          <p>Ready for a tiny challenge?</p>
+          <button class="button button-primary" id="startGame">
+            Let's play! ♡
+          </button>
+        </div>
+
+        <button class="target-heart hidden" id="targetHeart"
+          aria-label="Tangkap hati">♡</button>
+
+        <div class="game-complete hidden" id="gameComplete">
+          <span class="complete-flower">✿</span>
+          <h3>You found them all!</h3>
+          <p>One last thing is waiting for you.</p>
+          <button class="button button-primary" id="revealButton">
+            Open your last surprise ♡
+          </button>
+        </div>
+      </div>
+
+      <p class="game-hint">Psst... tap the heart before it moves.</p>
+    </section>
+
+    <!-- Final surprise -->
+    <section class="section final-section hidden" id="finalWish">
+      <div class="final-decoration">✿</div>
+      <span class="eyebrow">ONE LAST LITTLE WISH</span>
+      <h2>For your next<br><em>chapter.</em></h2>
+
+      <div class="final-message">
+        <p>
+          I hope this year gives you more reasons to be proud of
+          yourself, more moments worth remembering, and more
+          happiness than you know what to do with.
+        </p>
+
+        <p>
+          And if today makes you smile, even just a little,
+          then this little surprise has done its job.
+        </p>
+
+        <p class="final-highlight">You deserve good things. Always. ♡</p>
+      </div>
+
+      <div class="final-signature">happy birthday, once again ♡</div>
+
+      <button class="text-button" id="backToTop">Back to the beginning ↑</button>
+    </section>
+
+    <footer class="footer">
+      <span>made with ♡, just for your special day</span>
+    </footer>
+
+  </main>
+
+  <div class="confetti-container" id="confettiContainer"
+    aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
